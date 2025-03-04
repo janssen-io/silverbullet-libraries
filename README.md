@@ -9,17 +9,22 @@ You can either manually download them and copy them into your space or use my pl
 ## Overview
 
 ### Themes
-- [x] (Dark) Theme 
-
-(feel free to contribute more cool themes via a PR)
+[Logseq Dark Theme](./Library/LogseqDarkTheme/README.md)
+```yaml
+- "gh://janssen-io/silverbullet-libraries/Library/LogseqDarkTheme"
+```
 
 ### Snippets
 _None so far_
 
 ### Templates
-- [x] Eisenhower matrix for TODO's
-- [ ] Transcluding specific parts
+[Eisenhower Matrix](./Library/EisenhowerMatrix/README.md)
+```yaml
+- "gh://janssen-io/silverbullet-libraries/Library/EisenhowerMatrix"
+```
 
 ### Functions & Commands
-- [x] Open Page in Sidebar (via page picker)
-- [ ] Page name parts (`Part1/Part2/Part3`)
+[Open Page in Sidebar](./Library/OpenPageInSidebar/commands.md)
+```yaml
+- "gh://janssen-io/silverbullet-libraries/Library/OpenPageInSidebar"
+```
