@@ -1,18 +1,21 @@
 ## Links
 ```space-style
-html {
+html[data-theme=dark] {
     --treeview-folder-background-color: transparent;
     --treeview-folder-border-color: transparent;
     --treeview-folder-color: var(--root-color);
     --treeview-page-background-color: transparent;
     --treeview-page-border-color: transparent;
     --treeview-page-color: var(--root-color);
+
+  .treeview-root, .tree, .treeview-header {
+    background-color: hsl(193, 82%, 17%);
+  }
 }
 
 #sb-main > .sb-panel, #sb-top > .panel {
   margin-top: -7em;
-  flex: 0 !important;
-  width: 40ch;
+  min-width: 40ch;
 
   & > iframe {
     min-width: 40ch;
@@ -26,10 +29,6 @@ html {
 
 #sb-main > .sb-panel {
   z-index: 500;
-}
-
-.treeview-root, .tree, .treeview-header {
-  background-color: hsl(193, 82%, 17%);
 }
 
 .treeview-actions {
