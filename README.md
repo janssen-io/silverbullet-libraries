@@ -42,3 +42,10 @@ issue.
    pages.
 4. Files that are not relevant to be downloaded into a space **MUST** be added
    to `ignore.txt`
+
+## Other awesome SilverBullet things:
+
+- [GitHub](https://github.com/silverbulletmd/silverbullet)
+- [Community](https://community.silverbullet.md)
+- [🔌 TreeView](https://github.com/joekrill/silverbullet-treeview)
+- [📚 Journal Calendar](https://github.com/zeus-web/Silverbullet_Libraries)
