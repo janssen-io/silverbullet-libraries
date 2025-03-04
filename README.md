@@ -17,8 +17,9 @@ You can either manually download them and copy them into your space or use my pl
 _None so far_
 
 ### Templates
-- [ ] Eisenhower matrix for TODO's
+- [x] Eisenhower matrix for TODO's
 - [ ] Transcluding specific parts
 
 ### Functions & Commands
+- [x] Open Page in Sidebar (via page picker)
 - [ ] Page name parts (`Part1/Part2/Part3`)
