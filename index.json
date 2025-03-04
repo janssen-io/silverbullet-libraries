@@ -1,5 +1,10 @@
 [
-    { "name": "Library/Test/page.md" },
+    { "name": "Library/EisenhowerMatrix/README.md" },
+    { "name": "Library/EisenhowerMatrix/widget.md" },
+    { "name": "Library/EisenhowerMatrix/task-deadline-view.md" },
+
     { "name": "Library/LogseqDarkTheme/theme.md" },
-    { "name": "Library/LogseqDarkTheme/theme/tree.md" }
+    { "name": "Library/LogseqDarkTheme/theme/tree.md" },
+
+    { "name": "Library/Test/page.md" }
 ]
