@@ -333,7 +333,7 @@ html[data-theme=dark] {
   color: color-mix(in hsl, var(--root-color) 70%, transparent 30%) !important;
 }
 
-#sb-main .sb-line-fenced-code {
+#sb-main .sb-line-fenced-code, .cm-line:has(.sb-variableName, .sb-string, .sb-keyword, .sb-operator, .sb-directive-mark) {
   font-family: "Hack", monospace;
   line-height: 150% !important;
 }
