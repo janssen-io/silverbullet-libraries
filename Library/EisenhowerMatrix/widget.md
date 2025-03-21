@@ -7,36 +7,17 @@ hooks.bottom:
 
 # Tasks
 ## Do
-```query
-task
-where "important" in tags
-  and "urgent" in tags
-  and state != "x"
-render [[Library/EisenhowerMatrix/task-deadline-view]]
-```
+${template.each(eisenhower.query_do(), eisenhower.tpl_task)}
 ## Plan
-```query
-task
-where "important" in tags
-  and "not-urgent" in tags
-  and state != "x"
-order by deadline asc
-render [[Library/EisenhowerMatrix/task-deadline-view]]
-```
+${template.each(eisenhower.query_plan(), eisenhower.tpl_task)}
 ## Delegate
-```query
-task
-where "not-important" in tags
-  and "urgent" in tags
-  and state != "x"
-render [[Library/EisenhowerMatrix/task-deadline-view]]
-```
+${template.each(eisenhower.query_delegate(), eisenhower.tpl_task)}
 ## Miscellaneous
-```query
-task
-where tags = []
-  and state != "x"
-order by deadline asc
-render [[Library/EisenhowerMatrix/task-deadline-view]]
-```
+${template.each(query[[
+  from index.tag "task"
+  where not table.includes(tags, "important")
+    and not table.includes(tags, "urgent")
+    and state != "x"
+  order by deadline]], eisenhower.tpl_task)}
+
 ---

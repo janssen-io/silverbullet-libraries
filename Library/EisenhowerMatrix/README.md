@@ -43,3 +43,51 @@ The following Todo's will be shown as follows:
 
 ## Miscellaneous
 ```
+
+### Data
+- [ ] Rewrite commands in Lua #urgent #important
+- [ ] Write documentation #important #not-urgent
+- [ ] Spread the good word on the forums #not-important #urgent
+
+#### Do
+${template.each(eisenhower.query_do(), eisenhower.tpl_task)}
+#### Plan
+${template.each(eisenhower.query_plan(), eisenhower.tpl_task)}
+#### Delegate
+${template.each(eisenhower.query_delegate(), eisenhower.tpl_task)}
+
+
+## Template and functions
+```space-lua
+eisenhower = eisenhower or {}
+
+eisenhower.tpl_task = template.new [=[
+  * [${state}] ${deadline or ""} [[${ref}]]: ${name} 
+]=]
+
+eisenhower.query_do = function()
+  return query[[
+    from index.tag "task"
+    where table.includes(tags, "important")
+      and table.includes(tags, "urgent")
+      and state != "x"
+  ]]
+end
+
+eisenhower.query_plan = function()
+  return query[[
+    from index.tag "task"
+    where table.includes(tags, "important")
+      and not table.includes(tags, "urgent")
+      and state != "x"
+  ]]
+end
+
+eisenhower.query_delegate = function()
+  return query[[
+    from index.tag "task"
+    where not table.includes(tags, "important")
+      and table.includes(tags, "urgent")
+      and state != "x"
+  ]]
+end
