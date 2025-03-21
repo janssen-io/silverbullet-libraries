@@ -28,32 +28,7 @@ The thingy right at the top with the page name and icons.
   }
 }
 
-/* Mobile Toolbar */
-@media only screen and (max-width: 600px) {
-  #sb-top { opacity: 1 !important; }
-  #sb-top .main .inner .sb-actions {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    padding-bottom: 30px;
-    background: var(--top-background-color);
-    width: 100vw;
-    overflow-x: auto;
-    box-shadow: 0px 4px 8px black;
-    justify-content: space-around;
-    
-    button {
-      padding: 1em 1em;
-      margin: 5px 0 0 0;
-      
-      svg {
-        height: 1.4rem;
-        width: 1.4rem;
-        margin: 0;
-      }
-    }
-  }
-}
+/* Mobile toolbar is removed as it's now part of SilverBullet */
 ```
 
 ## Top and Bottom Widgets

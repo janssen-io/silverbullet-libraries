@@ -1,4 +1,4 @@
-## Links
+## Treeview
 ```space-style
 html[data-theme=dark] {
     --treeview-folder-background-color: transparent;
@@ -9,25 +9,23 @@ html[data-theme=dark] {
     --treeview-page-color: var(--root-color);
 
   .treeview-root, .tree, .treeview-header {
-    background-color: hsl(193, 82%, 17%);
+    background-color: var(--panel-background-color);
   }
 }
 
-#sb-main > .sb-panel, #sb-top > .panel {
+/* Use .first-child:is(.sb-panel) to only target the left panel */
+#sb-main > div:first-child:is(.sb-panel),
+#sb-top > :first-child:is(.panel) {
   margin-top: -7em;
   min-width: 40ch;
+  max-width: 60ch;
 
   & > iframe {
     min-width: 40ch;
   }
 }
 
-#sb-top > .panel {
-  padding-left: 40ch; /* width does not work */
-  z-index: 1;
-}
-
-#sb-main > .sb-panel {
+#sb-main > :first-child:is(.sb-panel) {
   z-index: 500;
 }
 
@@ -43,6 +41,10 @@ html:has(.treeview-root) {
 
   &:hover {
     opacity: 1;
+  }
+
+  body {
+    background-color: var(--panel-background-color);
   }
 }
 
@@ -68,7 +70,7 @@ html:has(.treeview-root) {
 }
 
 @media only screen and (max-width: 600px) {
-  #sb-main > .sb-panel {
+  #sb-main > div:first-child:is(.sb-panel) {
     width: 90vw;
     
     & > iframe {
