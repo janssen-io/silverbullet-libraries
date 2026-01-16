@@ -1,3 +1,8 @@
+---
+name: Library/janssen-io/OpenPageInSidebar
+tags: meta/library
+---
+
 # Sidebar: Open Page
 
 This command opens a page, picked from the page navigation picker, in the panel

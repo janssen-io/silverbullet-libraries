@@ -1,2 +1,0 @@
-Library/LogseqDarkTheme/README.md
-Library/LogseqDarkTheme/preview.png
